@@ -1,0 +1,10 @@
+/*
+/*/
+!/python/
+/python/OPAL/opacity
+/python/OPAL/EOSdata
+/python/old
+*.pyc
+*.ipynb
+.*
+!/.gitignore
