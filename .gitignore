@@ -1,3 +1,9 @@
-OPAL/EOSdata
+*
+
+!.gitignore
+!python
+
+python/OPAL/EOSdata
+python/old
 *.pyc
 *.ipynb
