@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+\usepackage[czech]{babel}
+\usepackage[]{units}
+\usepackage{fullpage}
+\usepackage{pdflscape}
+\usepackage{caption}
+\usepackage{courier}
+\usepackage{subcaption}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%,pxfonts} %matematicke prostredi ams
+\usepackage{gensymb}
+
+\def\D{\mathrm{d}}
+\newcommand{\pder}[2][]{\frac{\partial#1}{\partial#2}}
+\newcommand{\der}[2][]{\frac{\D#1}{\D#2}}
+
+\begin{document}
+\begin{align}
+	\pder[T]{t} &= \pder[T]{U}\pder[U]{t}\\
+	\pder[T]{U} &= \frac{1}{c_p(\rho V)} = \frac{1}{c_p\rho S(z)\D z}\\
+\end{align}
+kde $S(z)$ je obsah průřezu silotrubice. Změnu vnitřní energie počítám z úvahy, že úsek v hloubce $z$ ztrácí energii tím, že má nějaký výkon a naopak přijímá energii zespoda:
+\begin{align}
+	\pder[U]{t} &= -P(z)+P(z-\D z) = -F(z)S(z)+F(z-\D z)S(z-\D z)\\
+	\pder[T]{t} &= -\frac{1}{c_p\rho S(z)}\pder[]{z}(F(z)S(z)) \label{eq:zmena_s_obsahem}
+\end{align}
+Vzhledem ke konstatnímu toku $\Phi$ lze definovat střední poloměr $\langle r\rangle$ dle rovnice (24) z Deinzera:
+\begin{equation}
+	\Phi=\pi\langle r \rangle^2 B \\
+\end{equation}
+a pak tedy platí:
+\begin{equation}
+	S = \frac{\Phi}{B}.
+\end{equation}
+Dosazením do (\ref{eq:zmena_s_obsahem}) získám
+\begin{equation}
+\begin{aligned}
+	\pder[T]{t} &= -\frac{1}{c_p\rho}\pder[]{z}F(z)-\frac{F(z)\Phi}{c_p\rho S(z)}\pder[]{z}\left(\frac{1}{B(z)}\right)\\
+				&= \frac{1}{c_p\rho}\left(F\pder[\ln B]{z}-\pder[F]{z}\right)
+\end{aligned}
+\end{equation}
+\end{document}
