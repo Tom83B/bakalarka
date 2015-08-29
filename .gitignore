@@ -1,7 +1,6 @@
 /*
 /*/
-!/psaní/*.tex
-!/psaní/*.pdf
+!/psaní/
 !/python/
 /python/OPAL/opacity
 /python/OPAL/EOSdata
